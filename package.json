@@ -1,0 +1,23 @@
+{
+  "name": "assert-includes",
+  "version": "1.0.0",
+  "description": "Assert string includes",
+  "homepage": "https://github.com/jerone/assert-includes#readme",
+  "keywords": [
+    "assert",
+    "testing"
+  ],
+  "author": "Jeroen van Warmerdam <jeronevw@hotmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerone/assert-includes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jerone/assert-includes/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
