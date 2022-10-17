@@ -16,8 +16,16 @@
   "bugs": {
     "url": "https://github.com/jerone/assert-includes/issues"
   },
-  "main": "index.js",
+  "type": "module",
+  "exports": "./index.js",
+  "engines": {
+    "node": ">=14.16"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "jest-esm-transformer": "^1.0.0"
   }
 }
