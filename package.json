@@ -25,7 +25,9 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^26.1.0",
-    "jest-esm-transformer": "^1.0.0"
+    "@babel/core": "^7.19.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@upleveled/babel-plugin-remove-node-prefix": "^1.0.4",
+    "jest": "^26.1.0"
   }
 }

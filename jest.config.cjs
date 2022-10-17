@@ -8,6 +8,6 @@ module.exports = {
   coverageProvider: "v8",
   testEnvironment: "node",
   transform: {
-    ".js": "jest-esm-transformer",
+    ".js": './jest-esm-transformer.cjs',
   },
 };

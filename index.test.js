@@ -1,5 +1,5 @@
+import { AssertionError } from "node:assert";
 import { describe, expect, test } from "@jest/globals";
-import { AssertionError } from "assert";
 import assertIncludes from "./index.js";
 
 describe("assertIncludes module", () => {
