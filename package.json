@@ -39,5 +39,8 @@
     "@upleveled/babel-plugin-remove-node-prefix": "^1.0.4",
     "jest": "^29.2.2",
     "tsd": "^0.24.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
