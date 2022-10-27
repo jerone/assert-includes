@@ -1,6 +1,7 @@
 *
-!index.cjs
-!index.js
 !LICENSE
 !README.md
+!index.cjs
+!index.js
+!package.json
 !types.d.ts
