@@ -31,6 +31,7 @@ If the test fails, it will throw an `AssertionError`,
 which can be picked up by your testing library.
 
 For example with Jest, it will produce the following log:
+
 ![Jest log](docs/failing-test.png)
 
 ## API
