@@ -9,12 +9,12 @@ Assert that an value is included in a string.
 Most likely you want to use this package as development dependency.
 
 ```sh
-npm install clean-stack --save-dev
+npm install @jerone/assert-includes --save-dev
 ```
 
 Or with Yarn:
 ```sh
-yarn install clean-stack --dev
+yarn install @jerone/assert-includes --dev
 ```
 
 ## Usage
