@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm ci --no-fund
+      - run: npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+    name: "test (node v${{ matrix.node-version }})"
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci --no-fund
+      - run: npm run test
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure() # Run this step even if previous step failed.
+        with:
+          name: "test report (node v${{ matrix.node-version }})"
+          path: coverage/junit.xml
+          reporter: jest-junit
+
+  copyright:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: FantasticFiasco/action-update-license-year@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --rebase --delete-branch
