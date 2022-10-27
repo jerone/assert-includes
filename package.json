@@ -17,7 +17,16 @@
     "url": "https://github.com/jerone/assert-includes/issues"
   },
   "type": "module",
-  "exports": "./index.js",
+  "exports": {
+    ".": {
+      "types": "./types.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "main": "./index.cjs",
+  "types": "./types.d.ts",
+  "typings": "./types.d.ts",
   "engines": {
     "node": ">=14.16"
   },
