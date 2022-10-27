@@ -1,8 +1,8 @@
 const babel = require("@babel/core");
 
 module.exports = {
-  process(src) {
-    const options = {
+  process(sourceText, sourcePath, options) {
+    const babelOptions = {
       babelrc: false,
       compact: false,
       plugins: [
@@ -10,6 +10,8 @@ module.exports = {
         "@babel/plugin-transform-modules-commonjs",
       ],
     };
-    return babel.transform(src, options).code;
+    return {
+      code: babel.transform(sourceText, babelOptions).code,
+    };
   },
 };
