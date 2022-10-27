@@ -32,7 +32,7 @@ which can be picked up by your testing library.
 
 For example with Jest, it will produce the following log:
 
-![Jest log](docs/failing-test.png)
+![Jest log](https://raw.githubusercontent.com/jerone/assert-includes/master/docs/failing-test.png)
 
 ## API
 
