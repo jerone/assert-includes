@@ -14,7 +14,7 @@ npm install @jerone/assert-includes --save-dev
 
 Or with Yarn:
 ```sh
-yarn install @jerone/assert-includes --dev
+yarn add @jerone/assert-includes --dev
 ```
 
 ## Usage
