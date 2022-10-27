@@ -4,7 +4,7 @@
 
 Assert that an value is included in a string.
 
-## Install
+## Installation
 
 Most likely you want to use this package as development dependency.
 
