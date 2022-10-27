@@ -1,5 +1,5 @@
 {
-  "name": "assert-includes",
+  "name": "@jerone/assert-includes",
   "version": "0.1.0",
   "description": "Assert string includes",
   "homepage": "https://github.com/jerone/assert-includes#readme",

@@ -20,7 +20,7 @@ yarn install clean-stack --dev
 ## Usage
 
 ```js
-import assertIncludes from 'assert-includes';
+import assertIncludes from '@jerone/assert-includes';
 
 test("value contains string", () => {
   assertIncludes("abc", "a");
