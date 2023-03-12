@@ -38,19 +38,19 @@ For example with Jest, it will produce the following log:
 
 ### assertIncludes(value, includes)
 
-Returns `true` if valid or throws `AssertionError` if invalid.
+Returns `true` when valid or throws `AssertionError` when invalid.
 
 #### value
 
 Type: `string`
 
-Value expected to contain the included text.
+Actual value expected to contain the included text.
 
 #### includes
 
 Type: `string`
 
-The text that is part of the `value`.
+The text that is expected to be part of the `value`.
 
 <br/>
 <br/>
